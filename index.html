@@ -170,6 +170,44 @@
   </div>
 </section>
 
+<section class="hero teaser">
+  <section class="hero teaser">
+    <div class="container" style="display: flex; gap: 20px; padding: 20px; max-width: 50vw; margin: 0 auto; align-items: stretch;">
+      <!-- Vertical video on left -->
+      <div class="hero-body" style="flex: 1; display: flex; flex-direction: column; justify-content: center;">
+        <video poster="" id="video1" autoplay controls muted loop style="width: 100%;">
+          <source src="static/videos/Delete the following expenses from pro expense Streaming Services, Unexpected Expenses, Pet Supplies..mp4" type="video/mp4">
+        </video>
+      </div>
+      <!-- Two horizontal videos on right -->
+      <div class="hero-body" style="flex: 2; display: flex; flex-direction: column; gap: 20px; justify-content: center;">
+        <video poster="" id="video2" autoplay controls muted loop style="width: 100%;">
+          <source src="static/videos/Can you make Bing the main search thingy when I look stuff up on the internet.mp4" type="video/mp4">
+        </video>
+        <video poster="" id="video3" autoplay controls muted loop style="width: 100%;">
+          <source src="static/videos/add audio into my presentation file.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  
+    <script>
+      // Set different playback speeds when videos load
+      document.getElementById('video1').playbackRate = 0.9;  // 1.5x speed
+      document.getElementById('video2').playbackRate = 0.8;  // 2x speed
+      document.getElementById('video3').playbackRate = 0.7;  // 1.2x speed
+  
+      // Ensure playback rate is maintained after user interaction
+      const videos = ['video1', 'video2', 'video3'];
+      const speeds = [0.9, 0.8, 0.7];
+      
+      videos.forEach((videoId, index) => {
+        const video = document.getElementById(videoId);
+        video.addEventListener('play', () => {
+          video.playbackRate = speeds[index];
+        });
+      });
+    </script>
+  </section>
 
 <!-- Teaser video-->
 <!-- <section class="hero teaser">
